@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Bài 5</title>
+    <style>
+        .nut{
+            width: 40px;
+            height: 40px;
+        }
+        .show{
+            width: 170px;
+            height: 30px;
+            margin-left: 8px;
+            margin-top: 8px;
+        }
+        .wrapper{
+            width: 190px;
+            height: 310px;
+            border: 1px solid black;
+        }
+        table{
+            margin: 0 auto;
+        }
+        input {
+            text-align: right;
+        }
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+	<input class="show" id="ketqua" type="text"/>
+    <table>
+        <tr>
+            <td><input type="button" class="nut" value="%" onclick="ketqua.value=eval(ketqua.value/100)"/></td>
+            <td><input type="button" class="nut" value="C" onclick="ketqua.value='' "/></td>
+            <td colspan="2"><input style="width: 84px;" class="nut" type="button" value="Delete" onclick="ketqua.value=ketqua.value.substr(0,ketqua.value.length-1)"/></td>
+        </tr>
+        <tr>
+            <td><input type="button" class="nut" value="+\-" onclick="ketqua.value=eval((-1)*ketqua.value)"/></td>
+            <td><input type="button" class="nut" value="1/x" onclick="ketqua.value=eval(1/ketqua.value)"/></td>
+            <td><input type="button" class="nut" value="√" onclick="ketqua.value=eval(Math.sqrt(ketqua.value))"/></td>
+            <td><input type="button" class="nut" value="+" onclick="ketqua.value+=this.value"/></td>
+        </tr>
+        <tr>
+            <td><input type="button" value="7" class="nut" onclick="ketqua.value+=this.value"/></td>
+            <td><input type="button" value="8" class="nut" onclick="ketqua.value+=this.value"/></td>
+            <td><input type="button" value="9" class="nut" onclick="ketqua.value+=this.value"/></td>
+            <td><input type="button" value="-" class="nut" onclick="ketqua.value+=this.value"/></td>
+        </tr>
+        <tr>
+            <td><input type="button" value="4" class="nut" onclick="ketqua.value+=this.value"/></td>
+            <td><input type="button" value="5" class="nut" onclick="ketqua.value+=this.value"/></td>
+            <td><input type="button" value="6" class="nut" onclick="ketqua.value+=this.value"/></td>
+            <td><input type="button" value="*" class="nut" onclick="ketqua.value+=this.value"/></td>
+        </tr>
+        <tr>
+            <td><input type="button" value="1" class="nut" onclick="ketqua.value+=this.value"/></td>
+            <td><input type="button" value="2" class="nut" onclick="ketqua.value+=this.value"/></td>
+            <td><input type="button" value="3" class="nut" onclick="ketqua.value+=this.value"/></td>
+            <td><input type="button" class="nut" value="/" onclick="ketqua.value+=this.value"/></td>
+        </tr>
+        <tr>
+            <td><input type="button" class="nut " value="." onclick="ketqua.value+=this.value"/></td>
+            <td><input type="button" class="nut" value="0"  onclick="ketqua.value+=this.value"/></td>
+            <td colspan="2"><input style="width: 84px;" type="button" class="nut" value="=" onclick="ketqua.value=eval(ketqua.value)"/></td>
+        </tr>
+    </table>
+</body>
+</html>

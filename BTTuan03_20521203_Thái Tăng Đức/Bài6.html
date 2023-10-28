@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bài 6</title>
+  </head>
+  <body>
+    <a href="javascript:email()">E-Mail Someone!</a>
+    <form>
+      <button onclick="email()">E-Mail Someone!</button>
+    </form>
+    <script>
+      function email() {
+        who = prompt("Vui lòng nhập email người nhận: ", "thaitangduc@gmail.com");
+        what = prompt("Vui lòng nhập chủ đề: ", "Chủ đề");
+        if (
+          confirm(
+            "Bạn có chắc chắn muốn gửi mail cho " +
+              who +
+              " với chủ đề: " +
+              what +
+              "?"
+          ) == true
+        ) {
+          window.open("mailto:" + who + "?subject=" + what + "");
+        }
+      }
+    </script>
+  </body>
+</html>

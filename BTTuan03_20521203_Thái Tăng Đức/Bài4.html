@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bài 4</title>
+</head>
+<body>
+    <script>
+        var dmy = new Date()
+        var currentYear = dmy.getFullYear()
+        var year = window.prompt("Vui lòng nhập vào năm sinh của bạn:")
+        if (year >= currentYear){
+            alert("Thông tin năm sinh không hợp lệ!!!")
+            window.prompt("Vui lòng nhập lại đúng năm sinh của bạn:")
+        }
+        var age = currentYear - year
+        document.write("Tuổi của bạn là: " + age)
+    </script>
+</body>
+</html>

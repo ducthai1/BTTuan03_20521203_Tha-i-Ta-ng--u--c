@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bài 7</title>
+</head>
+<body>
+    <script>
+        function isInt(x){
+            var checkInt = x - parseInt(x)
+            if (checkInt>0) return false
+            else return true
+        }
+
+        function isPrime(x){
+            if (x < 2) return false
+            for (var i = 2; i <= x/2 ; i++) {
+                if (x % i == 0) return false
+            }
+            return true
+        }
+
+        var numberInt = window.prompt("Vui lòng nhập một số nguyên bất kỳ:")
+        while (!isInt(numberInt)) {
+            alert("Số nguyên không hợp lệ!!!")
+            numberInt = window.prompt("Vui lòng nhập đúng một số nguyên bất kỳ:")
+        }
+        
+        if (isPrime(numberInt)) document.write("Số " + numberInt + " là một số nguyên tố!")
+        else document.write("Số " + numberInt + " không phải là một số nguyên tố!")
+
+    </script>
+</body>
+</html>

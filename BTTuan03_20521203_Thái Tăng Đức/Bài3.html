@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+</head>
+<body>
+    <script>
+    function updateTitle(){
+        var dmy = new Date()
+        var hour = dmy.getHours()
+        var minute = dmy.getMinutes()
+        var second = dmy.getSeconds()
+        document.title = "Bây giờ là: " + hour + " giờ " + minute + " phút " + second + " giây."
+    }
+
+    setInterval(updateTitle, 1000)
+    </script>
+</body>
+</html>
